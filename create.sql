@@ -14,7 +14,8 @@ CREATE TABLE Mental_Illness
   OCD INT,
   Insomnia INT,
   AverageScore FLOAT,
-  PRIMARY KEY (AverageScore)
+  mental_illness_id INT,
+  PRIMARY KEY (mental_illness_id)
 );
 
 CREATE TABLE Person
@@ -23,8 +24,8 @@ CREATE TABLE Person
   age INT,
   hours_per_day FLOAT,
   Music_id INT,
-  AverageScore FLOAT,
+  mental_illness_id INT,
   PRIMARY KEY (person_id),
   FOREIGN KEY (Music_id) REFERENCES Music(Music_id),
-  FOREIGN KEY (AverageScore) REFERENCES Mental_Illness(AverageScore)
+  FOREIGN KEY (mental_illness_id) REFERENCES Mental_Illness(mental_illness_id)
 );
