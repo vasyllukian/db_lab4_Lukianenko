@@ -69,7 +69,7 @@ with conn:
     fav_genres, bpm_values = zip(*cur)
 
     plt.scatter(fav_genres, bpm_values)  
-    plt.xticks(fav_genres, ha='left', va='bottom')  # Adjust x-axis labels
+    plt.xticks(fav_genres, ha='left', va='bottom')
     plt.xlabel('Улюблений жанр')
     plt.ylabel('BPM')
     plt.title('Жанри та bpm музики для людей з середнім рівнем психічних \n захворювань більше 5, яким музика покращує психічний стан')
